@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Investor's Playbook: 100 Principles from the World's Greatest Investors</title>
+<style>
+@page {
+  size: A4;
+  margin: 2.2cm 2cm 2.5cm 2cm;
+  @top-center { content: element(running-header); }
+  @bottom-center { content: counter(page); font-family: 'Georgia', serif; font-size: 10pt; color: #666; }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 11.5pt;
+  line-height: 1.72;
+  color: #1a1a1a;
+  background: #fff;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* --- Print styles --- */
+@media print {
+  body { padding: 0; max-width: none; }
+  .no-print { display: none !important; }
+  .page { page-break-after: always; padding: 0; margin: 0; box-shadow: none; border: none; min-height: auto; }
+  .page:last-child { page-break-after: auto; }
+  .chapter-start { page-break-before: always; }
+  .principle { page-break-inside: avoid; }
+}
+
+/* --- Screen styles --- */
+@media screen {
+  body { background: #e5e7eb; padding: 20px 0; }
+  .page {
+    background: #fff;
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 24px;
+    padding: 60px 56px;
+    box-shadow: 0 2px 20px rgba(0,0,0,.12);
+  }
+}
+
+/* --- Cover --- */
+.cover {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; min-height: 297mm;
+}
+.cover-rule { width: 80px; height: 3px; background: #1a1a1a; margin-bottom: 48px; }
+.cover h1 { font-size: 38pt; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 12px; font-weight: 700; }
+.cover .subtitle { font-size: 16pt; color: #444; font-style: italic; margin-bottom: 48px; line-height: 1.4; }
+.cover .author { font-size: 12pt; color: #666; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+.cover .year { font-size: 11pt; color: #999; letter-spacing: 2px; margin-top: 4px; }
+.cover-bottom-rule { width: 80px; height: 3px; background: #1a1a1a; margin-top: 48px; }
+
+/* --- TOC --- */
+.toc h2 { font-size: 22pt; margin-bottom: 32px; text-align: center; }
+.toc-list { list-style: none; padding: 0; }
+.toc-list li { padding: 10px 0; border-bottom: 1px dotted #ccc; display: flex; justify-content: space-between; font-size: 11.5pt; }
+.toc-list li.chapter-entry { font-weight: 700; font-size: 12pt; padding-top: 18px; }
+.toc-list li.sub-entry { padding-left: 24px; color: #555; font-size: 10.5pt; }
+
+/* --- Chapters --- */
+.chapter-start { padding-top: 80px; }
+.chapter-num { font-size: 11pt; text-transform: uppercase; letter-spacing: 3px; color: #888; margin-bottom: 8px; }
+.chapter-title { font-size: 26pt; line-height: 1.2; margin-bottom: 8px; font-weight: 700; }
+.chapter-subtitle { font-size: 13pt; color: #555; font-style: italic; margin-bottom: 36px; }
+.chapter-intro { font-size: 11.5pt; color: #333; margin-bottom: 36px; line-height: 1.8; }
+.chapter-rule { width: 60px; height: 2px; background: #1a1a1a; margin-bottom: 36px; }
+
+/* --- Principles --- */
+.principle { margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid #e5e5e5; }
+.principle:last-child { border-bottom: none; }
+.principle-num { font-size: 10pt; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 6px; }
+.principle-quote { font-size: 13pt; font-style: italic; color: #1a1a1a; line-height: 1.6; margin-bottom: 6px; padding-left: 16px; border-left: 3px solid #1a1a1a; }
+.principle-attr { font-size: 9.5pt; color: #888; margin-bottom: 12px; padding-left: 16px; }
+.principle-analysis h4 { font-size: 10pt; text-transform: uppercase; letter-spacing: 1.5px; color: #555; margin-bottom: 6px; }
+.principle-analysis p { font-size: 10.5pt; color: #333; line-height: 1.7; margin-bottom: 8px; }
+.principle-action { background: #f8f8f8; padding: 12px 16px; border-radius: 4px; font-size: 10pt; color: #444; line-height: 1.6; }
+.principle-action strong { color: #1a1a1a; }
+
+/* --- Appendix --- */
+.appendix h2 { font-size: 22pt; margin-bottom: 28px; }
+.appendix h3 { font-size: 14pt; margin: 24px 0 12px; }
+.appendix p, .appendix li { font-size: 10.5pt; line-height: 1.7; color: #333; }
+.appendix ul { padding-left: 20px; margin-bottom: 16px; }
+.appendix li { margin-bottom: 6px; }
+.investor-card { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5; }
+.investor-card h4 { font-size: 12pt; margin-bottom: 4px; }
+.investor-card .investor-years { font-size: 9.5pt; color: #888; margin-bottom: 6px; }
+.investor-card p { font-size: 10.5pt; color: #444; }
+.cta-box { border: 2px solid #1a1a1a; padding: 28px; text-align: center; margin: 32px 0; }
+.cta-box h3 { font-size: 16pt; margin-bottom: 8px; }
+.cta-box p { font-size: 11pt; color: #444; margin-bottom: 4px; }
+.cta-box a { color: #1a1a1a; font-weight: 700; }
+
+/* --- Screen nav --- */
+.screen-nav {
+  position: fixed; top: 16px; right: 16px; z-index: 100;
+  background: #1a1a1a; color: #fff; padding: 10px 18px;
+  border-radius: 8px; font-family: sans-serif; font-size: 13px;
+  cursor: pointer; box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.screen-nav:hover { background: #333; }
+</style>
+</head>
+<body>
+
+<button class="screen-nav no-print" onclick="window.print()">Print / Save as PDF</button>
+
+<!-- ==================== COVER ==================== -->
+<div class="page cover">
+  <div class="cover-rule"></div>
+  <h1>The Investor's<br>Playbook</h1>
+  <p class="subtitle">100 Principles from the World's<br>Greatest Investors</p>
+  <p class="author">Curated by William Wang</p>
+  <p class="year">KeepRule.com &middot; 2026</p>
+  <div class="cover-bottom-rule"></div>
+</div>
+
+<!-- ==================== COPYRIGHT ==================== -->
+<div class="page" style="display:flex;flex-direction:column;justify-content:flex-end;">
+  <div style="font-size:9.5pt;color:#888;line-height:1.8;">
+    <p><strong style="color:#1a1a1a;">The Investor's Playbook</strong></p>
+    <p>100 Principles from the World's Greatest Investors</p>
+    <p style="margin-top:12px;">First Edition, 2026</p>
+    <p>Curated and edited by William Wang</p>
+    <p style="margin-top:12px;">Published by KeepRule.com</p>
+    <p style="margin-top:12px;">This is a free educational resource. You may share it freely with attribution.<br>
+    The quotes and principles belong to their respective authors.</p>
+    <p style="margin-top:12px;">For the interactive version with AI-powered analysis, visit:<br>
+    <strong style="color:#1a1a1a;">https://keeprule.com</strong></p>
+  </div>
+</div>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<div class="page toc chapter-start">
+  <h2>Table of Contents</h2>
+  <ul class="toc-list">
+    <li class="chapter-entry"><span>Chapter 1: The Foundation</span><span>Principles 1 &ndash; 15</span></li>
+    <li class="sub-entry"><span>Core philosophies from Buffett, Graham &amp; Munger</span></li>
+    <li class="chapter-entry"><span>Chapter 2: Risk Management</span><span>Principles 16 &ndash; 30</span></li>
+    <li class="sub-entry"><span>Margin of safety, diversification &amp; protecting capital</span></li>
+    <li class="chapter-entry"><span>Chapter 3: Value Assessment</span><span>Principles 31 &ndash; 45</span></li>
+    <li class="sub-entry"><span>Intrinsic value, moats &amp; competitive advantage</span></li>
+    <li class="chapter-entry"><span>Chapter 4: Market Psychology</span><span>Principles 46 &ndash; 60</span></li>
+    <li class="sub-entry"><span>Emotional discipline, contrarian thinking &amp; crowd behavior</span></li>
+    <li class="chapter-entry"><span>Chapter 5: Portfolio Management</span><span>Principles 61 &ndash; 75</span></li>
+    <li class="sub-entry"><span>Position sizing, rebalancing &amp; concentration vs. diversification</span></li>
+    <li class="chapter-entry"><span>Chapter 6: Long-term Thinking</span><span>Principles 76 &ndash; 90</span></li>
+    <li class="sub-entry"><span>Compounding, patience &amp; the power of time</span></li>
+    <li class="chapter-entry"><span>Chapter 7: Modern Investing</span><span>Principles 91 &ndash; 100</span></li>
+    <li class="sub-entry"><span>AI tools, rules-based investing &amp; the future</span></li>
+    <li class="chapter-entry"><span>Appendix</span></li>
+    <li class="sub-entry"><span>Recommended reading, investor profiles &amp; KeepRule guide</span></li>
+  </ul>
+</div>
+
+<!-- ==================== CHAPTER 1 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter One</div>
+  <div class="chapter-title">The Foundation</div>
+  <div class="chapter-subtitle">Principles 1 &ndash; 15: The bedrock of intelligent investing</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Every great investor builds upon a handful of fundamental truths. These fifteen principles represent the philosophical foundation &mdash; the non-negotiable beliefs that separate disciplined investors from speculators. Master these, and everything else follows.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 1</div>
+    <div class="principle-quote">"Rule No. 1: Never lose money. Rule No. 2: Never forget Rule No. 1."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This isn't about avoiding all risk &mdash; it's about asymmetric thinking. A 50% loss requires a 100% gain just to break even. Capital preservation is the first duty of every investor because the mathematics of loss are brutally unforgiving.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Before every investment, ask: "What's the worst-case scenario, and can I survive it?" If the downside threatens your ability to stay in the game, pass.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 2</div>
+    <div class="principle-quote">"Price is what you pay. Value is what you get."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The stock market is a voting machine in the short run and a weighing machine in the long run. Price fluctuates with mood; value is determined by the cash a business generates over its lifetime. The gap between these two is where all investment profit lives.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Never buy a stock solely because it has gone up, and never sell solely because it has gone down. Always return to an independent estimate of intrinsic value.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 3</div>
+    <div class="principle-quote">"The stock market is designed to transfer money from the active to the patient."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Overtrading is the silent killer of returns. Every transaction carries costs &mdash; commissions, spreads, taxes, and the opportunity cost of attention. The compounding machine works best when left undisturbed.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Track your portfolio turnover. If you're selling more than 20% of your holdings per year, ask whether activity is adding value or destroying it.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 4</div>
+    <div class="principle-quote">"An investment in knowledge pays the best interest."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Graham, the father of value investing, understood that the investor's most durable edge isn't a secret stock pick but a disciplined framework for thinking. Knowledge compounds just like capital &mdash; every book read, every annual report studied, widens your circle of competence.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Commit to reading one investing book and four annual reports per month. Keep a learning journal where you record new insights and test them against your portfolio decisions.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 5</div>
+    <div class="principle-quote">"It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid, instead of trying to be very intelligent."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Munger's inversion principle: instead of seeking brilliance, systematically eliminate stupidity. Most investment losses come from unforced errors &mdash; chasing fads, using excessive leverage, ignoring valuations. Avoiding these mistakes delivers better results than chasing alpha.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Create a "mistake checklist" of common investing errors. Review it before every buy or sell decision. Invert the question: "How could this investment destroy my capital?"</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 6</div>
+    <div class="principle-quote">"The individual investor should act consistently as an investor and not as a speculator."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The line between investing and speculating is the line between analysis and hope. An investor buys a fractional interest in a business based on its earnings power. A speculator bets on price momentum. The first builds wealth; the second mostly destroys it.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> For every position in your portfolio, write one sentence explaining the investment thesis. If you can't &mdash; or if the thesis is "it's going up" &mdash; you're speculating.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 7</div>
+    <div class="principle-quote">"Investing is not a game where the guy with the 160 IQ beats the guy with 130 IQ. Once you have ordinary intelligence, what you need is the temperament to control the urges that get other people into trouble."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Behavioral finance has proven Buffett right. The biggest determinant of investment success isn't analytical skill but emotional discipline. Intelligence helps you build a model; temperament determines whether you follow it when markets panic.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Write your investment plan during calm markets. When volatility strikes, follow the plan mechanically. Consider automating decisions (like rebalancing) to remove emotion from execution.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 8</div>
+    <div class="principle-quote">"Know what you own, and know why you own it."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Lynch managed Magellan Fund to 29% annual returns partly because he only held what he deeply understood. Conviction comes from knowledge, and conviction is what lets you hold through drawdowns and add when others are selling.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Can you explain each holding's business model, competitive position, and growth drivers in two minutes without notes? If not, you don't know it well enough to own it.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 9</div>
+    <div class="principle-quote">"The four most dangerous words in investing are: 'This time it's different.'"</div>
+    <div class="principle-attr">&mdash; Sir John Templeton</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Templeton, who bought during the depths of WWII and built a global investing empire, saw cycle after cycle. Human nature doesn't change: greed inflates bubbles, fear creates bargains. The narrative changes; the pattern doesn't.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> When you hear "this time it's different," increase your skepticism, not your exposure. Study market history &mdash; every bubble had a compelling story.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 10</div>
+    <div class="principle-quote">"The best investment you can make is in yourself."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Your earning power is your largest asset, especially early in life. Improving your skills, health, and network generates returns that compound for decades and can never be taxed, inflated away, or lost in a market crash.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Allocate at least 5% of your income and 5 hours per week to deliberate skill-building. The ROI on self-improvement dwarfs any market return.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 11</div>
+    <div class="principle-quote">"In the short run, the market is a voting machine, but in the long run, it is a weighing machine."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This is perhaps Graham's most important metaphor. Popularity drives short-term prices; fundamentals drive long-term prices. If you can tune out the voting and focus on the weighing, you have an edge over 90% of market participants.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Set a minimum holding period of one year for every investment. This simple rule forces you to evaluate businesses, not price charts.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 12</div>
+    <div class="principle-quote">"Spend each day trying to be a little wiser than you were when you woke up."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Munger's daily improvement philosophy is about building a latticework of mental models. The more frameworks you have &mdash; from psychology, physics, biology, history &mdash; the better you can evaluate businesses and avoid blind spots.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Read widely outside of finance. Study psychology (Cialdini), systems thinking (Meadows), and history (Durant). Cross-disciplinary knowledge creates investing superpowers.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 13</div>
+    <div class="principle-quote">"The goal of a non-professional should not be to pick winners but should rather be to own a cross-section of businesses that in aggregate are bound to do well."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Even Buffett recommends index funds for most people. The humility to admit you can't beat the market is itself a form of investment genius. Owning the entire market guarantees you'll capture every winner.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Unless you're willing to spend 10+ hours per week on research, put the core of your portfolio in a low-cost total market index fund.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 14</div>
+    <div class="principle-quote">"I will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Contrarian investing is emotionally brutal but mathematically sound. When fear peaks, prices are lowest and future returns are highest. When greed peaks, prices are highest and future returns are lowest. Acting on this requires pre-committed rules.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Create a "buy list" of great companies at target prices. When markets crash, you'll have a pre-made shopping list instead of paralysis.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 15</div>
+    <div class="principle-quote">"Risk comes from not knowing what you're doing."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>True risk isn't volatility &mdash; it's permanent loss of capital. And permanent loss most often comes from ignorance: buying what you don't understand, using leverage you can't handle, or ignoring the business behind the ticker symbol.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Define your circle of competence. Write down the 3-5 industries you genuinely understand. Stay within that circle, and expand it slowly through deliberate study.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 2 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Two</div>
+  <div class="chapter-title">Risk Management</div>
+  <div class="chapter-subtitle">Principles 16 &ndash; 30: Protecting your capital above all else</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Amateur investors ask "How much can I make?" Professionals ask "How much can I lose?" These fifteen principles will teach you to think about risk the way the masters do &mdash; not as something to avoid, but as something to understand, measure, and price correctly.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 16</div>
+    <div class="principle-quote">"The essence of investment management is the management of risks, not the management of returns."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Returns are a byproduct of managing risk well. If you control the downside, the upside takes care of itself. Graham's insight reframes the entire investing enterprise: your job is to survive, and survival compounds into wealth.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> For every investment, define your maximum acceptable loss before entering. Use position sizing, not hope, to control exposure.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 17</div>
+    <div class="principle-quote">"Margin of safety is always dependent on the price paid."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The margin of safety is the difference between intrinsic value and market price. The wider this gap, the more room you have for errors in judgment, bad luck, or economic downturns. It's your investing seatbelt.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Never pay more than 70% of your estimate of intrinsic value. This 30% buffer protects against analytical errors and unforeseen events.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 18</div>
+    <div class="principle-quote">"Diversification is a protection against ignorance. It makes very little sense for those who know what they're doing."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This is often misquoted as anti-diversification advice. Buffett's real point: if you can't identify great businesses, diversify widely. If you can, concentrate in your best ideas. The right level of diversification depends on your skill and knowledge.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Be honest about your skill level. Beginners should hold 15-25 positions or use index funds. Experienced analysts might concentrate in 5-10 high-conviction positions.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 19</div>
+    <div class="principle-quote">"The most important thing in investing is not to lose large amounts of money."</div>
+    <div class="principle-attr">&mdash; Seth Klarman</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Klarman, author of the legendary <em>Margin of Safety</em>, echoes Buffett's Rule No. 1 with specificity: small losses are acceptable and inevitable, but large losses destroy the compounding engine beyond repair.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Set a hard stop: no single position should be able to lose more than 5% of your total portfolio. This means sizing positions proportionally to their risk.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 20</div>
+    <div class="principle-quote">"There is no such thing as a good or bad stock; there are only cheap stocks and expensive stocks."</div>
+    <div class="principle-attr">&mdash; Howard Marks</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Marks, co-founder of Oaktree Capital, reminds us that quality and price are separate dimensions. A wonderful company at an outrageous price is a terrible investment. A mediocre company at a sufficiently low price might be a great one.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Separate your analysis into two steps: (1) Is this a good business? (2) Is this a good price? Both must pass for the investment to proceed.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 21</div>
+    <div class="principle-quote">"More money has been lost reaching for yield than at the point of a gun."</div>
+    <div class="principle-attr">&mdash; Raymond DeVoe Jr.</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>When interest rates are low, investors chase higher yields in riskier assets &mdash; junk bonds, leveraged products, exotic instruments. This reach for yield has caused more wealth destruction than any bear market because it disguises risk as income.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If an investment offers a yield significantly above the risk-free rate, ask: "What risk am I being paid to take?" If you can't identify the risk, you are the risk.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 22</div>
+    <div class="principle-quote">"The key to making money in stocks is not to get scared out of them."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Panic selling locks in temporary losses permanently. Lynch found that the best-performing stocks in his portfolio were the ones he held through scary periods. Risk management isn't just about selling &mdash; sometimes it's about having the courage to hold.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Only invest money you won't need for 5+ years. This eliminates the forced selling that turns paper losses into real ones.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 23</div>
+    <div class="principle-quote">"Never invest in a business you cannot understand."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>If you can't explain how a company makes money, you can't assess its risks. Complexity is often a red flag &mdash; the businesses that compound wealth most reliably tend to be simple to understand and difficult to replicate.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Apply the "newspaper test": could you write a one-paragraph description of the business for a general reader? If not, move on to something you understand.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 24</div>
+    <div class="principle-quote">"Risk means more things can happen than will happen."</div>
+    <div class="principle-attr">&mdash; Howard Marks</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Marks' definition of risk is profound: the future is a range of possibilities, not a single outcome. Good risk management means preparing for multiple scenarios, not just the most likely one. The tail events are where fortunes are made and destroyed.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> For each investment, sketch three scenarios: best case, base case, and worst case. Assign rough probabilities. If the expected value across all scenarios isn't clearly positive, pass.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 25</div>
+    <div class="principle-quote">"The market can stay irrational longer than you can stay solvent."</div>
+    <div class="principle-attr">&mdash; John Maynard Keynes</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Being right but early is the same as being wrong if you run out of capital. Keynes, himself a successful investor, learned this the hard way. Leverage and timing are the twin destroyers of correct theses.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Never use borrowed money to invest. Ensure you have 6-12 months of expenses in cash. Solvency is the prerequisite for being right eventually.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 26</div>
+    <div class="principle-quote">"You get recessions, you have stock market declines. If you don't understand that's going to happen, then you're not ready, you won't do well in the markets."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Expecting downturns is itself a form of risk management. If you know a 20-30% decline will happen every few years, you can prepare emotionally and financially. Surprise amplifies pain; expectation dampens it.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Study the historical frequency and duration of bear markets. Knowing that the average bear market lasts about 14 months makes it easier to hold through one.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 27</div>
+    <div class="principle-quote">"The biggest risk is not taking any risk."</div>
+    <div class="principle-attr">&mdash; Mark Zuckerberg</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Counterintuitive but true for long-term investors: holding only cash guarantees you'll lose purchasing power to inflation. The risk of inaction is real but invisible, which makes it more dangerous than market volatility.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Calculate the real (inflation-adjusted) return of your cash holdings over the past decade. This "cost of safety" should motivate you to accept reasonable market risk.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 28</div>
+    <div class="principle-quote">"We don't have to be smarter than the rest. We have to be more disciplined."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Discipline is the most underrated edge in investing. Markets are full of brilliant people who blow up because they can't stick to a process. The tortoise beats the hare in investing just as in fable.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Write your investment policy statement: your goals, time horizon, asset allocation, and rules for buying and selling. Review it quarterly but change it rarely.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 29</div>
+    <div class="principle-quote">"I've found that when the market's going down and you buy funds wisely, at some point in the future you will be happy."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Lynch's simple observation contains a powerful truth: every market decline in history has been a buying opportunity in retrospect. The difficulty is acting on this knowledge in real time, when headlines scream doom.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Set aside "opportunity cash" &mdash; 10-20% of your portfolio &mdash; specifically for deploying during significant market declines (20%+ from highs).</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 30</div>
+    <div class="principle-quote">"The first rule of compounding: Never interrupt it unnecessarily."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Every time you sell a winner to "take profits," you reset the compounding clock and trigger a tax event. The greatest wealth creators &mdash; Amazon, Apple, Berkshire &mdash; rewarded those who did nothing for decades.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Adopt a "never sell" default for your best holdings. Only sell when the thesis is broken, not when the price is high. Let compounding do the heavy lifting.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 3 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Three</div>
+  <div class="chapter-title">Value Assessment</div>
+  <div class="chapter-subtitle">Principles 31 &ndash; 45: Finding what a business is truly worth</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Value assessment is the analytical core of investing. These principles teach you to look past the stock ticker to the business underneath &mdash; its earnings power, its competitive defenses, and its potential for long-term growth. This is where investing becomes a craft.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 31</div>
+    <div class="principle-quote">"Intrinsic value can be defined simply: It is the discounted value of the cash that can be taken out of a business during its remaining life."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This is the only definition of value that matters. Not book value, not earnings multiples, not what someone else will pay &mdash; but the actual cash the business will generate, adjusted for the time value of money.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Learn to build a simple DCF (discounted cash flow) model. Even a rough estimate forces you to think about growth rates, margins, and reinvestment needs.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 32</div>
+    <div class="principle-quote">"In business, I look for economic castles protected by unbreachable moats."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>A moat is a structural competitive advantage that protects profits from competition. Without a moat, high returns attract competitors who eventually drive profits to zero. The moat is what makes a business worth owning for decades.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Identify the moat type: brand (Coca-Cola), network effects (Visa), switching costs (Microsoft), cost advantages (Costco), or intangible assets (patents). No moat = no long-term investment.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 33</div>
+    <div class="principle-quote">"It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This was Buffett's evolution from Graham's deep-value approach, influenced by Munger. A high-quality compounder bought at a reasonable price will outperform a mediocre business bought cheaply, because quality compounds and mediocrity mean-reverts.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Start your search with quality screens (ROE > 15%, consistent margins, low debt), then apply a valuation filter. Quality first, price second.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 34</div>
+    <div class="principle-quote">"Accounting is the language of business."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>You can't assess value without understanding financial statements. The income statement, balance sheet, and cash flow statement are the three lenses through which business reality is revealed. Illiteracy here is investing blindfolded.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Learn to read the cash flow statement first &mdash; it's hardest to manipulate. Free cash flow (operating cash flow minus capex) is the single most important number in valuation.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 35</div>
+    <div class="principle-quote">"Growth is always a component of value. It just matters whether the growth creates value or destroys it."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Not all growth is created equal. Growth that requires massive capital investment at low returns destroys value. Growth that comes from reinvesting at high returns on capital creates it. The return on incremental capital is what separates value-creating growth from value-destroying growth.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Calculate ROIC (Return on Invested Capital) over 5 years. If ROIC consistently exceeds the cost of capital (usually 8-10%), growth is creating value.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 36</div>
+    <div class="principle-quote">"The trick is to get more quality than you pay for in price."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Munger distills all of investing into one sentence. Quality is multidimensional &mdash; management, moat, growth runway, balance sheet strength. Price is one-dimensional. Your job is to get the first for less than it's worth.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Score businesses on a simple quality framework (1-10 on moat, management, financials, growth). Then compare the quality score to the valuation. High quality at low valuation = opportunity.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 37</div>
+    <div class="principle-quote">"The best business to own is one that over an extended period can employ large amounts of incremental capital at very high rates of return."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This describes a "compounder" &mdash; a business that can reinvest its profits at high returns for years. These are the rarest and most valuable businesses in the world because they grow intrinsic value exponentially.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Look for businesses with a large total addressable market AND high returns on capital. The combination means they have room to reinvest profitably for decades.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 38</div>
+    <div class="principle-quote">"Go for a business that any idiot can run &mdash; because sooner or later, any idiot probably will."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>A business that depends on genius management is fragile. The best businesses have such strong structural advantages that competent (not exceptional) management can maintain profitability. This is the ultimate test of a moat.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Ask: "If the CEO left tomorrow, would I still want to own this?" If the answer is no, the business is management-dependent, which is a hidden risk.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 39</div>
+    <div class="principle-quote">"The value of any stock, bond or business today is determined by the cash inflows and outflows &mdash; discounted at an appropriate interest rate &mdash; that can be expected to occur during the remaining life of the asset."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Buffett restates Graham's intrinsic value concept with precision. Every financial asset is ultimately a claim on future cash flows. All of investing reduces to estimating those cash flows and choosing the right discount rate.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Use a conservative discount rate (10-12% for stocks). If you need optimistic assumptions to justify the price, the margin of safety is too thin.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 40</div>
+    <div class="principle-quote">"The investor's chief problem &mdash; and even his worst enemy &mdash; is likely to be himself."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Even in value assessment, bias distorts judgment. Confirmation bias makes you see value where you want to see it. Anchoring makes you fixate on purchase prices. Overconfidence makes you underestimate uncertainty.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Before making a buy decision, write the bear case. Force yourself to argue against the investment. If you can't construct a credible bear case, you haven't done enough research.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 41</div>
+    <div class="principle-quote">"Time is the friend of the wonderful company, the enemy of the mediocre."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Great businesses get more valuable every year. Mediocre businesses slowly deteriorate. Over long holding periods, this difference compounds dramatically. Choosing quality over cheapness is really choosing to have time on your side.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Evaluate whether the business will be stronger in 10 years. Consider industry trends, competitive dynamics, and management's capital allocation. If the answer is unclear, the business isn't wonderful enough.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 42</div>
+    <div class="principle-quote">"Buy companies with strong histories of profitability and with a dominant business franchise."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Consistency of profits is a strong signal of competitive advantage. A company that has been profitable for 20 consecutive years likely has a real moat, not just luck. Track records matter because business quality is relatively persistent.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Screen for companies with 10+ years of positive free cash flow. This filter alone eliminates the majority of wealth-destroying investments.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 43</div>
+    <div class="principle-quote">"The most important quality for an investor is temperament, not intellect."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Value assessment is useless without the temperament to act on it. You can calculate intrinsic value perfectly, but if you panic-sell at the bottom or greed-buy at the top, your analysis was wasted.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Develop rules-based decision-making. Define in advance the conditions under which you will buy, hold, and sell. Then follow the rules, not your feelings.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 44</div>
+    <div class="principle-quote">"We look for businesses that we believe are virtually certain to be worth considerably more in ten to fifteen years."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This is Buffett's holding period test. "Virtually certain" eliminates speculative growth stories. "Considerably more" ensures the math works. "Ten to fifteen years" filters for durable advantages, not temporary trends.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Apply the Buffett test: Will this business earn significantly more in 10 years? If you can't answer with high confidence, it doesn't meet the bar for a long-term holding.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 45</div>
+    <div class="principle-quote">"Beware the investment activity that produces applause; the great moves are usually greeted by yawns."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The best investments are boring. Exciting investments are usually overpriced because excitement attracts crowds, and crowds drive up prices. When everyone is talking about a stock, the value has already been captured.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If a stock is trending on social media, it's too late. Look for unloved, ignored, boring businesses with strong fundamentals. The best returns come from boredom.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 4 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Four</div>
+  <div class="chapter-title">Market Psychology</div>
+  <div class="chapter-subtitle">Principles 46 &ndash; 60: Mastering the mental game</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Markets are not efficient machines &mdash; they are collections of human emotions. Fear, greed, envy, and overconfidence drive prices to extremes that fundamentals alone cannot explain. Understanding market psychology is understanding your greatest opponent: yourself.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 46</div>
+    <div class="principle-quote">"The investor who says 'This time is different' when in fact it's virtually identical to previous market cycles is bound to lose money."</div>
+    <div class="principle-attr">&mdash; Howard Marks</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Marks, in his famous memos, documents how every cycle is accompanied by a narrative explaining why old rules don't apply. The technology may change, but the human emotions that drive cycles never do.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Study at least three historical bubbles in detail (Tulipmania, Dot-com, 2008). Note the common psychological patterns. You'll see them again.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 47</div>
+    <div class="principle-quote">"The intelligent investor is a realist who sells to optimists and buys from pessimists."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Graham's Mr. Market allegory teaches that the market is your servant, not your master. Mr. Market offers you prices every day driven by his mood. You're under no obligation to accept. Buy when he's depressed; sell when he's euphoric.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Track the VIX (fear index) and the CNN Fear &amp; Greed Index. When extreme fear reigns, start buying. When extreme greed reigns, start trimming. Use market mood as a signal, not a command.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 48</div>
+    <div class="principle-quote">"Bull markets are born on pessimism, grow on skepticism, mature on optimism, and die on euphoria."</div>
+    <div class="principle-attr">&mdash; Sir John Templeton</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Templeton's market cycle framework is one of the most useful mental models in investing. It helps you locate where you are in the cycle by observing the prevailing mood, not the prevailing price.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Ask: "What is the prevailing sentiment right now?" If everyone you know is investing, you're in the optimism-to-euphoria phase. If nobody wants to talk about stocks, you're in the pessimism-to-skepticism phase. Act accordingly.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 49</div>
+    <div class="principle-quote">"People calculate too much and think too little."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Spreadsheet precision creates a false sense of certainty. A DCF model to two decimal places is still built on assumptions. Munger advocates for qualitative thinking about business quality, competitive dynamics, and management integrity alongside quantitative analysis.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> After building your financial model, close the spreadsheet and ask: "Would I want to own this entire business at this price for 10 years?" The gut-check should align with the numbers.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 50</div>
+    <div class="principle-quote">"Investing should be more like watching paint dry or watching grass grow. If you want excitement, take $800 and go to Las Vegas."</div>
+    <div class="principle-attr">&mdash; Paul Samuelson</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Nobel laureate Samuelson understood that the desire for excitement is antithetical to good investing. Entertainment and wealth-building are different goals. The portfolio that bores you is probably the one that will make you rich.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Uninstall stock-tracking apps from your phone. Check your portfolio monthly, not daily. Redirect the energy you'd spend on market-watching toward reading or earning more income.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 51</div>
+    <div class="principle-quote">"The stock market is filled with individuals who know the price of everything, but the value of nothing."</div>
+    <div class="principle-attr">&mdash; Philip Fisher</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Fisher, who pioneered growth investing, distinguished between price-watchers and value-seekers. Knowing that a stock is at $150 tells you nothing. Knowing that the business behind it is worth $200 tells you everything.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Ban yourself from checking stock prices for a week. Instead, read the latest quarterly earnings call transcript. Focus on the business, not the ticker.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 52</div>
+    <div class="principle-quote">"Successful investing is about managing risk, not avoiding it."</div>
+    <div class="principle-attr">&mdash; Benjamin Graham</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Psychologically, we conflate risk with danger and try to eliminate it. But investing requires risk. The goal is to take risks that are well-understood, well-compensated, and well-sized &mdash; not to avoid them entirely.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Rate each investment's risk on a 1-5 scale and ensure your portfolio's average risk matches your actual risk tolerance. Don't hide from risk; price it.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 53</div>
+    <div class="principle-quote">"We simply attempt to be fearful when others are greedy and to be greedy only when others are fearful."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This restatement of Principle 14 bears repeating because execution is everything. Knowing you should be contrarian is easy. Actually buying during a crash &mdash; when your portfolio is down 30% and experts predict worse &mdash; is psychologically brutal.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Pre-commit to buying rules. Example: "If the S&amp;P 500 drops 20%, I will deploy 25% of my cash reserves into my top 5 holdings." Write it down and sign it. Pre-commitment defeats in-the-moment fear.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 54</div>
+    <div class="principle-quote">"History provides a crucial insight regarding market crises: they are inevitable, painful and ultimately surmountable."</div>
+    <div class="principle-attr">&mdash; Shelby M.C. Davis</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Davis Advisors have navigated multiple crises across generations. Their perspective is rooted in history: every crisis felt like the end of the world during it, and every one was followed by recovery and new highs.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Keep a "crisis file" with newspaper headlines from past crashes alongside the subsequent market performance. When the next crisis hits, open the file before making any decisions.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 55</div>
+    <div class="principle-quote">"The most contrarian thing of all is not to oppose the crowd but to think for yourself."</div>
+    <div class="principle-attr">&mdash; Peter Thiel</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Thiel's insight cuts deeper than simple contrarianism. Reflexively doing the opposite of the crowd is still crowd-dependent. True independent thinking means developing your own thesis from first principles, which may sometimes agree with the crowd.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> For each investment, identify whether your thesis is original or borrowed. If you can't articulate why you believe something independent of what others say, you don't truly believe it.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 56</div>
+    <div class="principle-quote">"Thousands of experts study overbought indicators, oversold indicators, head-and-shoulder patterns... and they can't predict markets with any useful consistency."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Lynch's skepticism of technical analysis is backed by decades of evidence. Markets are too complex to be predicted by chart patterns. The energy spent on technical analysis is better spent understanding the businesses you own.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If you use charts, use them for identifying entry points on businesses you've already analyzed fundamentally &mdash; never as the primary decision tool.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 57</div>
+    <div class="principle-quote">"The most important organ in the body as far as the stock market is concerned is the stomach. It's not the brain."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Lynch reiterates the primacy of emotional resilience. During the 1987 crash, Magellan Fund lost billions in a single day. Lynch held firm because his stomach could handle it, not because his brain had a clever model.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Take the "sleep test." If your portfolio keeps you awake at night, you're taking too much risk. Reduce position sizes until you can sleep peacefully through a 20% drawdown.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 58</div>
+    <div class="principle-quote">"Acknowledging what you don't know is the dawning of wisdom."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Overconfidence is the most expensive cognitive bias in investing. The Dunning-Kruger effect ensures that the less you know, the more confident you are. Intellectual humility is a protective shield against catastrophic mistakes.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Maintain a "don't know" list alongside your watchlist. Being explicit about your areas of ignorance prevents you from accidentally wandering into them.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 59</div>
+    <div class="principle-quote">"The secret to investing is to figure out the value of something &mdash; and then pay a lot less."</div>
+    <div class="principle-attr">&mdash; Joel Greenblatt</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Greenblatt, author of <em>The Little Book That Beats the Market</em>, reduces all of investing to two skills: valuation and discipline. Figure out what it's worth, pay less, and repeat. The simplicity is the genius.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Create a two-column spreadsheet: estimated intrinsic value and current price. Only buy when price is significantly below value. Review monthly.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 60</div>
+    <div class="principle-quote">"Everyone has the brainpower to make money in stocks. Not everyone has the stomach."</div>
+    <div class="principle-attr">&mdash; Peter Lynch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Lynch's final word on market psychology: the barrier to investment success is not intelligence but emotional fortitude. You already know enough to invest well. The question is whether you can execute when it matters most.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Build your emotional resilience through experience. Start with small positions and gradually increase as you prove to yourself that you can handle volatility without panic.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 5 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Five</div>
+  <div class="chapter-title">Portfolio Management</div>
+  <div class="chapter-subtitle">Principles 61 &ndash; 75: Building and maintaining a winning portfolio</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Individual stock selection gets all the attention, but portfolio construction and management is where long-term returns are truly determined. How you combine, size, and maintain your holdings matters as much as what you hold. These principles are the operating system of successful investing.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 61</div>
+    <div class="principle-quote">"Wide diversification is only required when investors do not understand what they are doing."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Concentration builds wealth; diversification preserves it. The right approach depends on where you are in your investing journey. But even Buffett acknowledges that most investors should diversify broadly because truly understanding a business is harder than it looks.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Use the 80/20 approach: put 80% of your portfolio in diversified index funds and 20% in your highest-conviction individual ideas. This captures the best of both strategies.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 62</div>
+    <div class="principle-quote">"Good investing is boring."</div>
+    <div class="principle-attr">&mdash; George Soros</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Even Soros, known for aggressive macro bets, acknowledges that the best investing is monotonous. Excitement usually means you're gambling, not investing. A well-constructed portfolio should be as uneventful as a savings account &mdash; but far more productive.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If you find yourself constantly tinkering with your portfolio, impose a "cooling off" period: wait 72 hours between deciding to trade and executing the trade. Most impulse trades won't survive this filter.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 63</div>
+    <div class="principle-quote">"Put all your eggs in one basket, and watch that basket."</div>
+    <div class="principle-attr">&mdash; Andrew Carnegie</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Carnegie's concentrated approach built one of the world's great fortunes. In business and in investing, focus enables deep understanding. If you know a business better than anyone, concentration is rational, not reckless.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If you choose to concentrate, earn the right. Spend 50+ hours researching before making any single position more than 10% of your portfolio. Concentration without knowledge is just gambling with high stakes.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 64</div>
+    <div class="principle-quote">"Asset allocation determines 90% of your long-term returns."</div>
+    <div class="principle-attr">&mdash; David Swensen</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Swensen, who grew Yale's endowment from $1B to $30B, proved that the split between stocks, bonds, and alternatives matters more than which stocks you pick. Getting asset allocation right is the highest-leverage decision in portfolio management.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Define your target allocation based on your time horizon and risk tolerance. For most long-term investors: 70-90% equities, 5-20% bonds, 5-10% alternatives. Rebalance annually.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 65</div>
+    <div class="principle-quote">"Don't look for the needle in the haystack. Just buy the haystack."</div>
+    <div class="principle-attr">&mdash; John Bogle</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Bogle, founder of Vanguard and inventor of the index fund, demonstrated that owning the entire market outperforms most active managers over time. The cost savings alone (1-2% per year) compound into enormous differences over decades.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Make a low-cost total market index fund the core of your portfolio. Vanguard's VTI or similar products charge under 0.05% per year. This single holding beats most professional fund managers.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 66</div>
+    <div class="principle-quote">"Rebalancing is the only free lunch in investing."</div>
+    <div class="principle-attr">&mdash; Burton Malkiel</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Malkiel, author of <em>A Random Walk Down Wall Street</em>, notes that rebalancing forces you to sell high and buy low systematically. It maintains your risk profile and harvests the volatility premium &mdash; one of the few genuine free lunches in finance.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Set calendar-based (annual) or threshold-based (when any asset class drifts 5%+ from target) rebalancing rules. Automate it if possible. Never skip a rebalance.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 67</div>
+    <div class="principle-quote">"An investment in knowledge always pays the best interest."</div>
+    <div class="principle-attr">&mdash; Benjamin Franklin</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Franklin's wisdom applies directly to portfolio management: the time spent learning about asset classes, tax optimization, and fee structures has direct financial returns. Portfolio management is a skill that improves with study.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Learn about tax-loss harvesting, asset location (which assets go in which account types), and fee minimization. These "boring" optimizations can add 0.5-1% annually to your returns.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 68</div>
+    <div class="principle-quote">"The biggest risk in investing is not the volatility of prices, but whether you will suffer a permanent loss of capital."</div>
+    <div class="principle-attr">&mdash; Seth Klarman</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Klarman distinguishes between temporary fluctuations and permanent impairment. A stock that drops 50% and recovers is volatility. A company that goes bankrupt is permanent loss. Portfolio construction should focus on avoiding the latter.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Limit any single position to 5% of your portfolio at cost. This ensures that even a complete wipeout of one holding doesn't permanently damage your wealth.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 69</div>
+    <div class="principle-quote">"I don't care about revenues. How much free cash flow does the business generate?"</div>
+    <div class="principle-attr">&mdash; Bill Ackman</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Ackman focuses on what actually accrues to owners: free cash flow. Revenue can be misleading (unprofitable growth), earnings can be manipulated (accounting tricks), but free cash flow represents real money that can be returned to shareholders or reinvested.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Weight your portfolio toward businesses with high free cash flow yields (FCF/market cap > 5%). These businesses have the financial flexibility to survive downturns and reward shareholders.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 70</div>
+    <div class="principle-quote">"It's not whether you're right or wrong that's important, but how much money you make when you're right and how much you lose when you're wrong."</div>
+    <div class="principle-attr">&mdash; George Soros</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Soros introduces asymmetry: size your bets so that wins are large and losses are small. You can be wrong 60% of the time and still make money if your winners are 5x your losers. Position sizing is more important than being right.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Evaluate every position's risk/reward ratio before entering. Only take trades where the potential upside is at least 3x the potential downside. Cut losers quickly and let winners run.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 71</div>
+    <div class="principle-quote">"If investing is entertaining, if you're having fun, you're probably not making any money."</div>
+    <div class="principle-attr">&mdash; George Soros</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Soros reiterates the theme: profitable investing is psychologically uncomfortable. Buying when others are panicking, holding when bored, selling when euphoric &mdash; none of these actions feel good. If investing feels fun, you're likely doing it wrong.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Keep a "mood journal" alongside your trading journal. Note how you feel when you make each trade. Correlate emotions with outcomes. You'll find that uncomfortable trades tend to be profitable ones.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 72</div>
+    <div class="principle-quote">"Markets are constantly in a state of uncertainty and flux, and money is made by discounting the obvious and betting on the unexpected."</div>
+    <div class="principle-attr">&mdash; George Soros</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The consensus view is already priced in. Profits come from seeing what others miss. This doesn't mean being contrarian for its own sake, but developing insights that the market hasn't yet incorporated into prices.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> For each investment, articulate your "variant perception" &mdash; the specific way your view differs from the market consensus and why you believe you're right.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 73</div>
+    <div class="principle-quote">"I made my money by selling too soon."</div>
+    <div class="principle-attr">&mdash; Bernard Baruch</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Baruch, who navigated the 1929 crash profitably, understood that trying to capture the last dollar of a move is how fortunes are lost. Selling "too soon" means you locked in profits while the trend was still in your favor.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Don't anchor to all-time highs. If an investment has reached your target valuation, consider trimming 25-50% regardless of momentum. Partial profit-taking is a powerful risk management tool.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 74</div>
+    <div class="principle-quote">"In investing, what is comfortable is rarely profitable."</div>
+    <div class="principle-attr">&mdash; Robert Arnott</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Arnott, pioneer of smart beta strategies, notes that the investments that feel safest are usually the most overpriced (everyone has already bought them), and the investments that feel dangerous are usually the cheapest (everyone has already sold them).</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Regularly review your portfolio for "comfortable" positions that have become overvalued and "uncomfortable" opportunities in undervalued sectors.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 75</div>
+    <div class="principle-quote">"The stock market is never obvious. It is designed to fool most of the people, most of the time."</div>
+    <div class="principle-attr">&mdash; Jesse Livermore</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Livermore, the greatest speculator of the early 20th century, warns that the obvious trade is usually the wrong trade. If the market's direction seems clear to everyone, the move has likely already happened.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> When your conviction is highest, reduce your position size slightly. When your conviction is lowest (but your analysis is solid), consider adding. The market rewards those who can act against their feelings.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 6 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Six</div>
+  <div class="chapter-title">Long-term Thinking</div>
+  <div class="chapter-subtitle">Principles 76 &ndash; 90: The power of patience and compounding</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">Albert Einstein reportedly called compound interest the eighth wonder of the world. Whether he actually said it doesn't matter &mdash; the math is irrefutable. These fifteen principles celebrate the most powerful force in investing: time, applied patiently to quality assets.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 76</div>
+    <div class="principle-quote">"Our favorite holding period is forever."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>When Buffett says "forever," he means it. Berkshire still holds Coca-Cola shares purchased in 1988. Over 37+ years, dividends alone have returned many multiples of the original investment. Selling would have triggered a massive tax bill and ended the compounding.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> When you buy a stock, ask: "Would I be comfortable holding this for 20 years without a quote?" If not, you don't know the business well enough to own it for 20 minutes.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 77</div>
+    <div class="principle-quote">"Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it."</div>
+    <div class="principle-attr">&mdash; Attributed to Albert Einstein</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>At 10% annual returns, $10,000 becomes $67,000 in 20 years and $452,000 in 40 years. The second 20 years generates 6.7x more wealth than the first. This exponential curve is why starting early and staying invested matters more than anything else.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Calculate your "future self" number: take your current investment balance, assume 8% annual returns, and project 30 years forward. This exercise makes the abstract power of compounding viscerally real.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 78</div>
+    <div class="principle-quote">"Someone's sitting in the shade today because someone planted a tree a long time ago."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Buffett's tree metaphor perfectly captures the relationship between sacrifice today and reward tomorrow. Every dollar invested is a seed. The shade it provides decades later &mdash; in retirement income, financial freedom, generational wealth &mdash; is the harvest of patience.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Automate your investments. Set up monthly contributions to your investment accounts. Make investing as automatic as paying rent. Your future self will thank you.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 79</div>
+    <div class="principle-quote">"The stock market is a device for transferring money from the impatient to the patient."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Impatience manifests as overtrading, market timing, and chasing performance. Each costs real money in transaction costs, taxes, and behavioral errors. Patience costs nothing and earns the full return of the market.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Implement a "one-year rule": never sell any investment within its first year unless the fundamental thesis is clearly broken. This single rule eliminates most impulsive selling.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 80</div>
+    <div class="principle-quote">"Do not save what is left after spending, but spend what is left after saving."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This simple inversion of the typical approach to personal finance is the foundation of wealth-building. Most people spend first and save what's left (usually nothing). Inverting this ensures you always feed the compounding machine first.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Set up automatic transfers on payday: 20% to investments before any discretionary spending. You'll adjust your lifestyle to the remaining 80% faster than you expect.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 81</div>
+    <div class="principle-quote">"The big money is not in the buying or selling, but in the waiting."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Munger spent most of his investing career simply waiting: waiting for the right opportunity to buy, and then waiting for the investment to compound. The vast majority of Berkshire's wealth was generated by doing nothing after making good initial decisions.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Track your portfolio's performance with and without your trades. Many investors discover that their "buy and hold" strategy significantly outperforms their "actively managed" approach.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 82</div>
+    <div class="principle-quote">"The major fortunes in this country were not made by portfolio diversification. They were made by concentration."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>While diversification protects wealth, concentration creates it. Every billionaire investor got there by making a few outsized bets that paid off enormously. The trick is knowing when your conviction justifies concentration &mdash; and it rarely does.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Reserve a "conviction allocation" of 10-20% of your portfolio for your single highest-conviction idea. This balances the wealth-building power of concentration with the protection of diversification.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 83</div>
+    <div class="principle-quote">"If you aren't willing to own a stock for 10 years, don't even think about owning it for 10 minutes."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This is Buffett's litmus test for investment quality. If a business isn't worth owning for a decade, it's not worth the transaction costs and cognitive load of owning it at all. This single filter eliminates 95% of potential investments &mdash; which is exactly the point.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Before buying, write a one-page "10-year thesis" explaining why the business will be more valuable in 2036. If you can't write it convincingly, don't buy.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 84</div>
+    <div class="principle-quote">"Time in the market beats timing the market."</div>
+    <div class="principle-attr">&mdash; Ken Fisher</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Fisher's research shows that missing just the 10 best trading days over a 20-year period cuts your returns by more than half. Since the best days often occur during the worst periods, market timers almost always miss them. Staying invested is the only reliable strategy.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Invest a fixed amount every month regardless of market conditions (dollar-cost averaging). This mathematically ensures you buy more shares when prices are low and fewer when prices are high.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 85</div>
+    <div class="principle-quote">"The most powerful force in the universe is compound interest."</div>
+    <div class="principle-attr">&mdash; Attributed to Albert Einstein</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Whether Einstein said it or not, the math is undeniable. $1 compounded at 10% for 100 years becomes $13,780. Compounding is powerful because returns generate returns, which generate more returns, in an ever-expanding cycle that accelerates with time.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Never withdraw from your investment accounts unless absolutely necessary. Every dollar withdrawn breaks the compounding chain. Treat your investment account as untouchable wealth-in-progress.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 86</div>
+    <div class="principle-quote">"I never attempt to make money on the stock market. I buy on the assumption that they could close the market the next day and not reopen it for five years."</div>
+    <div class="principle-attr">&mdash; Warren Buffett</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Buffett's "closed market" thought experiment forces you to evaluate the business, not the stock. If the market closed for five years, would you be comfortable owning this business and collecting its profits? If yes, buy. If not, don't.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Apply the closed-market test to every holding in your portfolio. Sell anything you wouldn't want to own for five years without a quote. This exercise reveals which positions are investments and which are speculations.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 87</div>
+    <div class="principle-quote">"All intelligent investing is value investing &mdash; acquiring more than you are paying for."</div>
+    <div class="principle-attr">&mdash; Charlie Munger</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Munger collapses the false distinction between "value" and "growth" investing. Every rational investor seeks to pay less than intrinsic value. The only question is how you estimate that value &mdash; whether through current assets (classic value) or future earnings (growth).</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Stop labeling yourself a "value" or "growth" investor. Instead, focus on one question: "Is the price less than the value?" The method of estimating value is secondary.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 88</div>
+    <div class="principle-quote">"Buy when everyone else is selling and hold until everyone else is buying. That's not just a catchy slogan. It's the very essence of successful investing."</div>
+    <div class="principle-attr">&mdash; J. Paul Getty</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Getty, once the richest man in America, built his fortune by buying undervalued oil assets during downturns. His insight is timeless: the crowd creates opportunities for the patient contrarian who has the capital and courage to act.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Maintain a "wish list" of quality companies at target prices. When markets crash, you'll have a pre-built shopping list. The time to prepare your buy list is during bull markets, not during panics.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 89</div>
+    <div class="principle-quote">"We don't prognosticate macroeconomic factors, we're looking at our companies from a bottom-up perspective on their long-run prospects of returning cash."</div>
+    <div class="principle-attr">&mdash; Mellody Hobson</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Hobson, president of Ariel Investments, advocates for bottom-up investing. Instead of trying to predict GDP, interest rates, or election outcomes, focus on individual businesses and their ability to generate cash. Macro predictions are unreliable; business analysis is not.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If you spend more than 10% of your research time on macroeconomics, you're probably wasting effort. Redirect that time to reading annual reports and understanding individual businesses.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 90</div>
+    <div class="principle-quote">"Enjoy the journey. Investing is a lifelong endeavor, not a sprint to the finish line."</div>
+    <div class="principle-attr">&mdash; William Wang, KeepRule.com</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The investors who perform best over decades are those who genuinely enjoy the process of learning about businesses and markets. If investing feels like a chore, you'll abandon it during difficult periods. If it's a passion, you'll keep going through every cycle.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Find the aspect of investing you enjoy most &mdash; analysis, reading, discussion &mdash; and lean into it. Build a community of like-minded investors. The social aspect makes the journey sustainable.</div>
+  </div>
+</div>
+
+<!-- ==================== CHAPTER 7 ==================== -->
+<div class="page chapter-start">
+  <div class="chapter-num">Chapter Seven</div>
+  <div class="chapter-title">Modern Investing</div>
+  <div class="chapter-subtitle">Principles 91 &ndash; 100: Rules-based investing and the future</div>
+  <div class="chapter-rule"></div>
+  <p class="chapter-intro">The greatest investors all share one trait: they follow rules. Not rigid formulas, but disciplined frameworks that remove emotion from decision-making. In the age of AI, the opportunity to systematize investment wisdom has never been greater. These final ten principles bridge timeless wisdom with modern tools.</p>
+
+  <div class="principle">
+    <div class="principle-num">Principle 91</div>
+    <div class="principle-quote">"The investor who can systematize their decision-making will outperform the one who relies on gut instinct."</div>
+    <div class="principle-attr">&mdash; Ray Dalio</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Dalio built Bridgewater, the world's largest hedge fund, on systematized principles. By codifying investment rules and testing them against data, you remove the cognitive biases that plague discretionary decision-making.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Write down your top 10 investment rules. Test each one against your historical trades. Keep rules that worked, discard those that didn't. This is the beginning of a systematic approach.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 92</div>
+    <div class="principle-quote">"Write down your investment principles. If you can't write them down, you don't have a process."</div>
+    <div class="principle-attr">&mdash; Ray Dalio</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The act of writing forces clarity. Vague ideas like "buy good companies" become specific rules like "buy companies with ROE > 15%, debt-to-equity < 0.5, and 10+ years of dividend growth, at a P/E below 20." Specificity enables accountability.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Create your personal "Investment Policy Statement" covering: goals, time horizon, risk tolerance, asset allocation, selection criteria, buying rules, selling rules, and review schedule. Use tools like KeepRule to organize and track your principles.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 93</div>
+    <div class="principle-quote">"Technology is a useful servant but a dangerous master."</div>
+    <div class="principle-attr">&mdash; Christian Lous Lange</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>In the era of AI-powered trading, algorithmic strategies, and real-time data, technology can either enhance your investing process or destroy it. Used wisely, AI helps you analyze more data and reduce bias. Used poorly, it encourages overtrading and false precision.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Use technology for research, screening, and tracking &mdash; but never let an algorithm make the final decision without your understanding and approval. AI should augment your judgment, not replace it.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 94</div>
+    <div class="principle-quote">"Rules are the guardrails that keep discipline from being derailed by emotion."</div>
+    <div class="principle-attr">&mdash; William Wang, KeepRule.com</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Every principle in this book is a rule in disguise. "Never lose money" is a risk management rule. "Be greedy when others are fearful" is a contrarian timing rule. The investors who succeed are those who codify their rules and follow them consistently.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Build your personal rule book using a tool like KeepRule (keeprule.com). Organize your rules by category, review them before making decisions, and track which rules saved you from mistakes and which led to profits.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 95</div>
+    <div class="principle-quote">"The democratization of information has shifted the edge from data access to data interpretation."</div>
+    <div class="principle-attr">&mdash; Cathie Wood</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Everyone has access to the same financial data now. The edge no longer comes from having information first but from interpreting it differently and more accurately. AI tools can process vast amounts of data, but the human investor provides the judgment layer.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Focus on developing unique analytical frameworks rather than seeking proprietary data. Read contrarian research, develop variant perceptions, and use AI to stress-test your ideas against counter-arguments.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 96</div>
+    <div class="principle-quote">"The best time to plant a tree was 20 years ago. The second best time is now."</div>
+    <div class="principle-attr">&mdash; Chinese Proverb</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Procrastination is the greatest enemy of compounding. Every day you delay investing is a day of compounding lost forever. The math doesn't care about your reasons for waiting &mdash; it only knows the time you gave it to work.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> If you haven't started investing, open an account today and invest even a small amount. If you have been investing, increase your contribution. Action, however small, beats perfect planning indefinitely postponed.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 97</div>
+    <div class="principle-quote">"Every investment decision should be traceable back to a written principle."</div>
+    <div class="principle-attr">&mdash; Ray Dalio</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Traceability creates accountability. When every buy and sell decision maps to a specific principle, you can audit your process. You'll discover which principles are working and which need revision. This feedback loop is how investors improve.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> In your trading journal, tag every decision with the principle(s) that drove it. Quarterly, review which principles generated the best and worst outcomes. Evolve your rulebook based on evidence.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 98</div>
+    <div class="principle-quote">"Simplicity is the ultimate sophistication."</div>
+    <div class="principle-attr">&mdash; Leonardo da Vinci</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>The most successful investment strategies are remarkably simple: buy quality, pay a fair price, hold for the long term. Complexity is often a disguise for confusion. If you can't explain your strategy in one paragraph, it's probably too complicated.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Distill your investment strategy to 5 core rules or fewer. If your process requires a flowchart with more than 10 nodes, simplify. The best strategies fit on a single index card.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 99</div>
+    <div class="principle-quote">"The goal is not to be right. The goal is to make money."</div>
+    <div class="principle-attr">&mdash; Howard Marks</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>Ego is the enemy of profits. Many investors would rather be right and lose money than admit they were wrong and cut their losses. Separating your identity from your investment thesis is essential for rational decision-making.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Define "wrong" objectively for each investment: "If X happens within Y months, my thesis is broken." When that condition is met, sell without hesitation. Being wrong quickly is better than being wrong slowly.</div>
+  </div>
+
+  <div class="principle">
+    <div class="principle-num">Principle 100</div>
+    <div class="principle-quote">"The secret to successful investing is not a secret at all. It is discipline, patience, and a commitment to continuous learning."</div>
+    <div class="principle-attr">&mdash; William Wang, KeepRule.com</div>
+    <div class="principle-analysis">
+      <h4>Why it matters</h4>
+      <p>This book contains 100 principles from the world's greatest investors. But principles are only valuable if practiced. The gap between knowing and doing is where most investors fail. Close that gap, and you'll outperform not through genius but through consistency.</p>
+    </div>
+    <div class="principle-action"><strong>Apply it:</strong> Choose 5 principles from this book that resonate most deeply with you. Write them on a card and read them before every investment decision. Revisit this book quarterly. Let these principles become the foundation of your investing life. And visit <strong>keeprule.com</strong> to build your own personalized investment rulebook.</div>
+  </div>
+</div>
+
+<!-- ==================== APPENDIX ==================== -->
+<div class="page chapter-start appendix">
+  <h2>Appendix A: Recommended Reading</h2>
+  <p>These books represent the best investment education available. Each one has the potential to transform your approach to wealth-building.</p>
+
+  <h3>Essential Foundation (Start Here)</h3>
+  <ul>
+    <li><strong>The Intelligent Investor</strong> by Benjamin Graham &mdash; The bible of value investing. Focus on chapters 8 (Mr. Market) and 20 (Margin of Safety).</li>
+    <li><strong>Common Stocks and Uncommon Profits</strong> by Philip Fisher &mdash; The growth investing counterpart to Graham. His "scuttlebutt" research method remains invaluable.</li>
+    <li><strong>One Up on Wall Street</strong> by Peter Lynch &mdash; The most accessible investing book ever written. Lynch's enthusiasm for finding great businesses is contagious.</li>
+    <li><strong>A Random Walk Down Wall Street</strong> by Burton Malkiel &mdash; The case for index investing, backed by decades of evidence.</li>
+  </ul>
+
+  <h3>Advanced Thinking</h3>
+  <ul>
+    <li><strong>The Most Important Thing</strong> by Howard Marks &mdash; Twenty chapters of distilled wisdom on risk, cycles, and second-level thinking.</li>
+    <li><strong>Margin of Safety</strong> by Seth Klarman &mdash; Out of print and commanding $1,000+ secondhand, but PDFs circulate. Klarman's risk-first approach is timeless.</li>
+    <li><strong>Poor Charlie's Almanack</strong> by Charlie Munger &mdash; Mental models, multidisciplinary thinking, and witty aphorisms from Buffett's partner.</li>
+    <li><strong>Principles</strong> by Ray Dalio &mdash; Not just about investing; it's about systematizing decision-making in all areas of life.</li>
+    <li><strong>The Little Book That Beats the Market</strong> by Joel Greenblatt &mdash; A simple, elegant formula for finding undervalued quality companies.</li>
+  </ul>
+
+  <h3>Psychology &amp; Behavior</h3>
+  <ul>
+    <li><strong>Thinking, Fast and Slow</strong> by Daniel Kahneman &mdash; The definitive work on cognitive biases and how they affect financial decisions.</li>
+    <li><strong>Influence</strong> by Robert Cialdini &mdash; Understanding persuasion helps you resist the narratives that drive market manias.</li>
+    <li><strong>The Psychology of Money</strong> by Morgan Housel &mdash; Modern, accessible stories about how people think about money. An instant classic.</li>
+  </ul>
+
+  <h3>Berkshire Hathaway Letters</h3>
+  <ul>
+    <li><strong>Berkshire Hathaway Shareholder Letters</strong> (1977&ndash;present) &mdash; Free at berkshirehathaway.com. The single best investment education in existence, delivered annually by the greatest investor in history.</li>
+  </ul>
+</div>
+
+<div class="page appendix">
+  <h2>Appendix B: Investor Profiles</h2>
+  <p>A brief guide to the legendary investors whose wisdom fills these pages.</p>
+
+  <div class="investor-card">
+    <h4>Warren Buffett</h4>
+    <div class="investor-years">Born 1930 &middot; Chairman, Berkshire Hathaway</div>
+    <p>The "Oracle of Omaha" has compounded Berkshire's book value at ~20% annually for nearly six decades. His philosophy evolved from Graham's pure value approach to Munger-influenced quality investing. Known for discipline, patience, and reading 500 pages per day.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Charlie Munger</h4>
+    <div class="investor-years">1924 &ndash; 2023 &middot; Vice Chairman, Berkshire Hathaway</div>
+    <p>Buffett's indispensable partner and intellectual equal. Munger brought mental models, multidisciplinary thinking, and the conviction to pay fair prices for wonderful businesses. His speeches and writings are treasures of practical wisdom.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Benjamin Graham</h4>
+    <div class="investor-years">1894 &ndash; 1976 &middot; Father of Value Investing</div>
+    <p>Graham wrote <em>Security Analysis</em> (1934) and <em>The Intelligent Investor</em> (1949), establishing the intellectual foundation for all of value investing. His concepts of Mr. Market and margin of safety remain as relevant today as when they were written.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Peter Lynch</h4>
+    <div class="investor-years">Born 1944 &middot; Former Manager, Fidelity Magellan Fund</div>
+    <p>Lynch achieved 29.2% annual returns from 1977 to 1990, making Magellan the best-performing mutual fund in the world. His "invest in what you know" philosophy democratized investing for millions of individual investors.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Howard Marks</h4>
+    <div class="investor-years">Born 1946 &middot; Co-founder, Oaktree Capital Management</div>
+    <p>Marks manages $190B+ in assets, specializing in distressed debt. His investor memos, collected in <em>The Most Important Thing</em>, are required reading at every major investment firm. Known for his nuanced thinking about risk and cycles.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Sir John Templeton</h4>
+    <div class="investor-years">1912 &ndash; 2008 &middot; Pioneer of Global Investing</div>
+    <p>Templeton was one of the first to invest globally, buying Japanese stocks in the 1960s when nobody else would. He famously bought 100 shares of every stock trading under $1 in 1939, turning $10,000 into $40,000 in four years.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Ray Dalio</h4>
+    <div class="investor-years">Born 1949 &middot; Founder, Bridgewater Associates</div>
+    <p>Dalio built the world's largest hedge fund ($150B+) by codifying investment principles into systematic strategies. His "radical transparency" philosophy and All Weather portfolio approach have influenced an entire generation of institutional investors.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Seth Klarman</h4>
+    <div class="investor-years">Born 1957 &middot; CEO, Baupost Group</div>
+    <p>Klarman manages $30B+ with a fanatical focus on downside protection. His book <em>Margin of Safety</em> is the rarest and most coveted investing book. He averages ~20% annual returns while taking less risk than the market.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>George Soros</h4>
+    <div class="investor-years">Born 1930 &middot; Founder, Soros Fund Management</div>
+    <p>Soros achieved 30%+ annual returns over 30 years through macro investing. Famous for "breaking the Bank of England" in 1992, his theory of reflexivity provides a unique framework for understanding market dynamics.</p>
+  </div>
+
+  <div class="investor-card">
+    <h4>Philip Fisher</h4>
+    <div class="investor-years">1907 &ndash; 2004 &middot; Pioneer of Growth Investing</div>
+    <p>Fisher held Motorola for 55 years after buying it in 1955. His 15-point checklist for evaluating growth companies influenced Buffett's evolution from pure value to quality-focused investing.</p>
+  </div>
+</div>
+
+<div class="page appendix">
+  <h2>Appendix C: About KeepRule</h2>
+
+  <p>This ebook was curated by the team behind <strong>KeepRule</strong> &mdash; a platform designed to help investors organize, internalize, and apply the timeless principles of the world's greatest investors.</p>
+
+  <h3>What is KeepRule?</h3>
+  <p>KeepRule is a free tool that helps you build your personal investment rulebook. It collects the best investing principles from legendary investors like Buffett, Munger, and Graham, organized by category, and lets you:</p>
+
+  <ul>
+    <li><strong>Browse curated principles</strong> from the world's greatest investors, organized by topic</li>
+    <li><strong>Save your favorites</strong> to build a personalized investment rulebook</li>
+    <li><strong>Add your own principles</strong> learned from experience</li>
+    <li><strong>Review principles</strong> before making investment decisions</li>
+    <li><strong>Explore investment scenarios</strong> with AI-powered analysis</li>
+  </ul>
+
+  <h3>Why Rules-Based Investing?</h3>
+  <p>Research shows that investors who follow written rules significantly outperform those who rely on instinct. Rules-based investing works because it:</p>
+  <ul>
+    <li>Removes emotion from decision-making</li>
+    <li>Creates accountability and traceability</li>
+    <li>Enables continuous improvement through review</li>
+    <li>Prevents the most common behavioral mistakes</li>
+  </ul>
+
+  <div class="cta-box">
+    <h3>Start Building Your Rulebook Today</h3>
+    <p>Visit <a href="https://keeprule.com">keeprule.com</a> to explore investment principles and build your personalized investing framework.</p>
+    <p style="margin-top:8px;font-size:10pt;color:#888;">Free to use. No credit card required.</p>
+  </div>
+
+  <div style="text-align:center;margin-top:48px;padding-top:24px;border-top:2px solid #1a1a1a;">
+    <p style="font-size:14pt;font-weight:700;">Thank you for reading.</p>
+    <p style="font-size:11pt;color:#555;margin-top:8px;">May these principles serve you well on your investment journey.</p>
+    <p style="font-size:10pt;color:#888;margin-top:24px;">&copy; 2026 William Wang &middot; KeepRule.com</p>
+  </div>
+</div>
+
+</body>
+</html>
